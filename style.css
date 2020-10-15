@@ -1,0 +1,190 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+}
+
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+/* above this - tutorial reset */
+
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 175%;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+body {
+  background-image: linear-gradient(236deg, #da9a10, #c2eb81);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.title {
+  margin-bottom: 35px;
+}
+
+.signature {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+}
+
+.calculator {
+  border-radius: 12px;
+  max-width: 15em;
+  overflow: hidden;
+}
+
+.calculator-display {
+  background-color: #080301;
+  text-align: right;
+  color: #fff;
+  font-size: 1.6em;
+  padding: 0.4em 0.65em;
+}
+
+/* target the whole div */
+.calculator-keys {
+  background-color: #080301;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* target each element in the div independently */
+.calculator-keys > * {
+  background-color: #fff;
+  padding: 0.5em 1.25em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calculator-keys > *:hover {
+  background-color: #e6e2da;
+}
+
+.operator {
+  background-color: #b0afab;
+}
+
+.operator:hover {
+  background-color: #747370;
+}
+
+#equal {
+  background-image: linear-gradient(236deg, #0b4b70, #085d8f);
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+
+#equal:hover {
+  background-image: linear-gradient(236deg, #072f46, #06476d);
+}
+
+.clear {
+  background-image: linear-gradient(236deg, #eb710e, #bb8309);
+}
+
+.clear:hover {
+  background-image: linear-gradient(236deg, #b8580a, #775305);
+}
+
+.calculator-keys > *:active {
+  background-color: #e6e2da;
+  transform: translateY(1px);
+}
