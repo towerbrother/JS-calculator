@@ -108,6 +108,20 @@ body {
   height: 100vh;
 }
 
+.title {
+  margin-bottom: 35px;
+}
+
+.signature {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.link {
+  text-decoration: underline;
+  color: black;
+}
+
 .calculator {
   border-radius: 12px;
   max-width: 15em;
@@ -134,7 +148,6 @@ body {
 .calculator-keys > * {
   background-color: #fff;
   padding: 0.5em 1.25em;
-  /* position: relative; - not required? */
   text-align: center;
   cursor: pointer;
 }
@@ -174,10 +187,4 @@ body {
 .calculator-keys > *:active {
   background-color: #e6e2da;
   transform: translateY(1px);
-}
-
-.signature > * {
-  font-size: 0.75em;
-  margin-top: 5%;
-  color: #080301;
 }
