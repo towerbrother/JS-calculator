@@ -135,6 +135,7 @@ body {
   color: #fff;
   font-size: 1.6em;
   padding: 0.4em 0.65em;
+  overflow-x: scroll;
 }
 
 /* target the whole div */
