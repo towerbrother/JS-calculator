@@ -5,7 +5,7 @@ const state = {
   displayValue: "0",
   firstOperand: null,
   waitingForSecondOperand: false,
-  operator: null
+  operator: null,
 };
 
 const resetState = () => {
@@ -36,7 +36,7 @@ const updateDisplay = () => {
   display.textContent = state.displayValue;
 };
 
-const inputNumber = value => {
+const inputNumber = (value) => {
   if (state.waitingForSecondOperand === true) {
     state.displayValue = value;
     state.waitingForSecondOperand = false;
@@ -47,7 +47,7 @@ const inputNumber = value => {
   }
 };
 
-const inputDecimal = dot => {
+const inputDecimal = (dot) => {
   if (state.waitingForSecondOperand === true) {
     return;
   }
@@ -57,7 +57,7 @@ const inputDecimal = dot => {
   }
 };
 
-const handleOperator = operator => {
+const handleOperator = (operator) => {
   //handle multiple operator clicks in sequence
   if (state.operator && state.waitingForSecondOperand) {
     state.operator = operator;
@@ -79,7 +79,7 @@ const handleOperator = operator => {
   state.operator = operator;
 };
 
-keys.addEventListener("click", e => {
+keys.addEventListener("click", (e) => {
   const key = e.target;
   const keyContent = key.textContent;
   const operator = key.id;
