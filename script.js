@@ -37,7 +37,7 @@ const updateDisplay = () => {
 };
 
 const inputNumber = (value) => {
-  if (state.waitingForSecondOperand === true) {
+  if (state.waitingForSecondOperand) {
     state.displayValue = value;
     state.waitingForSecondOperand = false;
   } else {
@@ -48,7 +48,7 @@ const inputNumber = (value) => {
 };
 
 const inputDecimal = (dot) => {
-  if (state.waitingForSecondOperand === true) {
+  if (state.waitingForSecondOperand) {
     return;
   }
 
@@ -64,7 +64,7 @@ const handleOperator = (operator) => {
     return;
   }
 
-  if (state.firstOperand === null) {
+  if (!state.firstOperand) {
     state.firstOperand = state.displayValue;
   } else if (state.operator) {
     const result = calculate(
